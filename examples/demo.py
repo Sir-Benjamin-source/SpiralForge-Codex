@@ -6,6 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from TruthLayering import TruthLayer
 from NarrativeCoherence import NarrativeEngine
 from EthicalFilter import EthicalFilter
+from ContinuityOptimizer import ContinuityOptimizer
 
 def main():
     # Sample input text (e.g., from an LLM)
@@ -23,6 +24,10 @@ def main():
     ethical_filter = EthicalFilter()
     ethical_result = ethical_filter.filter(coherence_result['refined_text'])
     
+    # Optimize with ContinuityOptimizer
+    continuity_optimizer = ContinuityOptimizer()
+    continuity_result = continuity_optimizer.optimize(ethical_result['filtered_text'])
+    
     # Print results
     print(f"Input: {sample_text}")
     print(f"Truth Output: {truth_result['enhanced_text']}")
@@ -32,6 +37,9 @@ def main():
     print(f"Ethical Output: {ethical_result['filtered_text']}")
     print(f"Ethics Score: {ethical_result['ethics_score']}")
     print(f"Compliance Status: {ethical_result['compliance_status']}")
+    print(f"Continuity Output: {continuity_result['optimized_text']}")
+    print(f"Continuity Score: {continuity_result['continuity_score']}")
+    print(f"Context Status: {continuity_result['context_status']}")
 
 if __name__ == "__main__":
     main()
