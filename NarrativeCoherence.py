@@ -8,9 +8,9 @@ class NarrativeEngine:
         Returns:
             dict: Refined text with watermark and coherence score.
         """
-        # Mock coherence score (C) - placeholder for PIE fractal graph analysis
-        # TODO: Implement real PIE (e.g., analyze text structure with NLP)
-        coherence_score = 0.85  # Placeholder (0 to 1)
+        # Mock coherence score - placeholder for PIE fractal graph analysis
+        # TODO: Implement real PIE (e.g., NLP-based structure analysis)
+        coherence_score = 0.85
         
         # Return refined text with watermark and coherence score
         return {
