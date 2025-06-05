@@ -1,9 +1,12 @@
 # enhance_endpoint.py: /enhance endpoint for AI certification
+from flask import Flask, request, jsonify
 from TruthLayering import TruthLayer
 from NarrativeCoherence import NarrativeEngine
 from EthicalFilter import AnomalyDetector
 from ContinuityOptimizer import ContinuityOptimizer
 from config import DEFAULT_CONFIG
+
+app = Flask(__name__)
 
 def enhance(text, config=None):
     """
@@ -68,7 +71,22 @@ def log_to_vault(result):
     # Future: Implement vault logging
     pass
 
+@app.route('/enhance', methods=['POST'])
+def enhance_endpoint():
+    """
+    HTTP endpoint for AI certification.
+    Input: JSON {"text": "input text", "config": {...}}
+    Output: JSON with scores, status, and watermarked output
+    """
+    data = request.get_json()
+    text = data.get('text', '')
+    config = data.get('config', DEFAULT_CONFIG)
+    result = enhance(text, config)
+    return jsonify(result)
+
 if __name__ == "__main__":
     sample_text = "The sky is blue."
     result = enhance(sample_text)
     print(result)
+    # Run Flask app for testing
+    app.run(debug=True, host='0.0.0.0', port=5000)
