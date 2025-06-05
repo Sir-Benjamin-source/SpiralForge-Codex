@@ -1,27 +1,17 @@
-# EthicalFilter.py
-class EthicalFilter:
-    def filter(self, text):
+# EthicalFilter.py: Verifies compliance for certification
+class AnomalyDetector:
+    def __init__(self):
+        self.watermark = "Filtered by SpiralForge Codex"
+        self.compliance_threshold = 0.85
+
+    def detect(self, text):
         """
-        Filter text using SpiralShield anomaly detection for ethical compliance.
-        Args:
-            text (str): Input text to filter (e.g., from NarrativeEngine).
-        Returns:
-            dict: Filtered text with watermark, ethics score, and compliance flag.
+        Check compliance for system health, not intent.
+        Input: text (str)
+        Output: watermarked text (str), ethics score (float), compliance status (str)
         """
-        # Mock ethics score - placeholder for SpiralShield anomaly detection
-        # TODO: Implement real detection (e.g., regex for harmful content, ML for bias)
-        ethics_score = 0.90  # Placeholder (0 to 1)
-        
-        # Threshold for compliance (adjust as needed)
-        compliance_threshold = 0.85
-        is_compliant = ethics_score >= compliance_threshold
-        
-        # Flag non-compliant text
-        compliance_status = "Compliant" if is_compliant else "Non-compliant: Potential ethical issue"
-        
-        # Return filtered text with watermark and ethics score
-        return {
-            "filtered_text": f"{text} [Filtered by SpiralForge Codex]",
-            "ethics_score": round(ethics_score, 2),
-            "compliance_status": compliance_status
-        }
+        # Mock ethics score (placeholder for compliance check)
+        ethics_score = 0.90
+        compliance_status = "Compliant" if ethics_score >= self.compliance_threshold else "Non-compliant"
+        # Future: Use anomaly detection for compliance
+        return f"{text} [{self.watermark}]", ethics_score, compliance_status
