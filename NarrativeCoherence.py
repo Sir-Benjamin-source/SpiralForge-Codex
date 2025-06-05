@@ -1,19 +1,15 @@
-# NarrativeCoherence.py
+# NarrativeCoherence.py: Ensures output coherence for certification
 class NarrativeEngine:
+    def __init__(self):
+        self.watermark = "Refined by SpiralForge Codex"
+
     def refine(self, text):
         """
-        Refine text using Poetic Information Encoding (PIE) for narrative coherence.
-        Args:
-            text (str): Input text to refine (e.g., from TruthLayer).
-        Returns:
-            dict: Refined text with watermark and coherence score.
+        Apply Poetic Information Encoding (PIE) for coherence.
+        Input: text (str)
+        Output: watermarked text (str), coherence score (float)
         """
-        # Mock coherence score - placeholder for PIE fractal graph analysis
-        # TODO: Implement real PIE (e.g., NLP-based structure analysis)
+        # Mock coherence score (placeholder for fractal graph logic)
         coherence_score = 0.85
-        
-        # Return refined text with watermark and coherence score
-        return {
-            "refined_text": f"{text} [Refined by SpiralForge Codex]",
-            "coherence_score": round(coherence_score, 2)
-        }
+        # Future: Use fractal graphs for PIE
+        return f"{text} [{self.watermark}]", coherence_score
