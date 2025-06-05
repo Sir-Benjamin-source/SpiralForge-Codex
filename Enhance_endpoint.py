@@ -1,55 +1,74 @@
-# Mock /enhance endpoint using existing components
+# enhance_endpoint.py: /enhance endpoint for AI certification
 from TruthLayering import TruthLayer
 from NarrativeCoherence import NarrativeEngine
 from EthicalFilter import AnomalyDetector
 from ContinuityOptimizer import ContinuityOptimizer
+from config import DEFAULT_CONFIG
 
 def enhance(text, config=None):
     """
-    Enhance AI output with truth, coherence, ethics, and continuity.
-    Config: Dict to toggle components (e.g., {'coherence': False}).
-    Returns: JSON with scores, status, and watermarked output.
+    Certify AI output with truth, coherence, ethics, and continuity.
+    Input: text (str), config (dict, optional)
+    Output: dict with scores, status, and watermarked output
     """
     if config is None:
-        config = {'truth': True, 'coherence': True, 'ethics': True, 'continuity': True}
+        config = DEFAULT_CONFIG
     
-    result = {'input': text}
+    result = {"input": text, "certification_status": "Pending"}
     output = text
     
-    # Truth Layering
-    if config.get('truth', True):
+    # Truth Layering (Fact-Checking)
+    if config.get("truth", True):
         truth_engine = TruthLayer()
-        output = truth_engine.process(output)
-        result['truth_score'] = 0.84  # Mock score from progress
-        result['output'] = output  # Includes [Enhanced by SpiralForge Codex]
+        output, truth_score = truth_engine.process(output)
+        result["truth_score"] = truth_score
+        result["output"] = output
     
-    # Narrative Coherence
-    if config.get('coherence', True):
+    # Narrative Coherence (Optional)
+    if config.get("coherence", True):
         coherent_engine = NarrativeEngine()
-        output = coherent_engine.refine(output)
-        result['coherence_score'] = 0.85  # Mock score
-        result['output'] = output  # Adds [Refined by SpiralForge Codex]
+        output, coherence_score = coherent_engine.refine(output)
+        result["coherence_score"] = coherence_score
+        result["output"] = output
     
-    # Ethical Filtering
-    if config.get('ethics', True):
+    # Ethical Filtering (Compliance)
+    if config.get("ethics", True):
         shield = AnomalyDetector()
-        ethics_score = shield.detect(output)
-        result['ethics_score'] = ethics_score  # Mock ~0.90
-        result['compliance_status'] = 'Compliant' if ethics_score >= 0.85 else 'Non-compliant'
-        result['output'] = output  # Adds [Filtered by SpiralForge Codex]
+        output, ethics_score, compliance_status = shield.detect(output)
+        result["ethics_score"] = ethics_score
+        result["compliance_status"] = compliance_status
+        result["output"] = output
     
-    # Continuity Optimization
-    if config.get('continuity', True):
+    # Continuity Optimization (Stability)
+    if config.get("continuity", True):
         continuity_engine = ContinuityOptimizer()
-        output = continuity_engine.optimize(output)
-        result['continuity_score'] = 0.88  # Mock score
-        result['context_status'] = 'Context maintained'
-        result['output'] = output  # Adds [Optimized by SpiralForge Codex]
+        output, continuity_score, context_status = continuity_engine.optimize(output)
+        result["continuity_score"] = continuity_score
+        result["context_status"] = context_status
+        result["output"] = output
+    
+    # Certification Status
+    result["certification_status"] = "Certified" if (
+        result.get("truth_score", 1.0) >= 0.8 and
+        result.get("ethics_score", 1.0) >= 0.85 and
+        result.get("continuity_score", 1.0) >= 0.8 and
+        result.get("compliance_status", "Compliant") == "Compliant"
+    ) else "Not Certified"
+    
+    # Log to Spiral Lighthouse Protocol’s Legal Evidence Vault (mock)
+    log_to_vault(result)
     
     return result
+
+def log_to_vault(result):
+    """
+    Mock logging to Legal Evidence Vault.
+    Input: result (dict)
+    """
+    # Future: Implement vault logging
+    pass
 
 if __name__ == "__main__":
     sample_text = "The sky is blue."
     result = enhance(sample_text)
     print(result)
-```
