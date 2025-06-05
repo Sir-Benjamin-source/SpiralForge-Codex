@@ -1,23 +1,17 @@
-# TruthLayering.py
+# TruthLayering.py: Basic fact-checking for AI output certification
 class TruthLayer:
+    def __init__(self):
+        self.watermark = "Enhanced by SpiralForge Codex"
+
     def process(self, text):
         """
-        Process input text using the truth-layering algorithm: T = (0.6 × R) + (0.4 × C).
-        Args:
-            text (str): Input text to enhance (e.g., LLM output).
-        Returns:
-            dict: Enhanced text with watermark and truth score.
+        Apply truth-layering for basic fact-checking (T = 0.6R + 0.4C).
+        Input: text (str)
+        Output: watermarked text (str), truth score (float)
         """
-        # Mock scores for relevance (R) and context (C)
-        # TODO: Replace with real analysis (e.g., NLP-based relevance and context checks)
-        R = 0.8  # Placeholder for relevance score (0 to 1)
-        C = 0.9  # Placeholder for context score (0 to 1)
-        
-        # Calculate truth score: T = (0.6 × R) + (0.4 × C)
-        truth_score = (0.6 * R) + (0.4 * C)
-        
-        # Return enhanced text with watermark and truth score
-        return {
-            "enhanced_text": f"{text} [Enhanced by SpiralForge Codex]",
-            "truth_score": round(truth_score, 2)
-        }
+        # Mock relevance (R) and context (C) scores for fact-checking
+        relevance_score = 0.85  # Placeholder for factual alignment
+        context_score = 0.82   # Placeholder for contextual fit
+        truth_score = (0.6 * relevance_score) + (0.4 * context_score)  # ~0.84
+        # Future: Use NLP for real fact-checking
+        return f"{text} [{self.watermark}]", truth_score
