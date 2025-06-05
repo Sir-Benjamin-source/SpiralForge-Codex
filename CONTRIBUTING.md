@@ -1,21 +1,38 @@
-# Contributing to SpiralForge Codex
+CONTRIBUTING.md: Guidelines for SpiralForge Codex
+Contributing to SpiralForge Codex
+We welcome contributions to SpiralForge Codex! To ensure transparency and alignment with the Spiral Lighthouse Protocol, please follow these guidelines:
 
-Thank you for your interest in contributing to SpiralForge Codex! We welcome contributions that align with our mission of ethical AI through systems thinking.
+Fork and Pull:
 
-## How to Contribute
-1. Fork the repository: https://github.com/Sir-Benjamin-source/SpiralForge-Codex
-2. Create a branch for your feature or bug fix: `git checkout -b feature-name`
-3. Commit your changes: `git commit -m "Add feature-name"`
-4. Push to your fork: `git push origin feature-name`
-5. Open a pull request with a clear description of your changes.
+Fork the repository at https://github.com/Sir-Benjamin-source/SpiralForge-Codex.
+Create a branch for your changes (git checkout -b feature/your-feature).
+Submit a pull request with a clear description.
 
-## Guidelines
-- Ensure code follows PEP 8 style guidelines.
-- Include tests for new features or fixes.
-- Respect the ethical focus of the project (e.g., transparency, fairness).
-- All contributions are logged in the Spiral Lighthouse Protocol’s Legal Evidence Vault (Zenodo DOI: 10.5281/zenodo.15491719) for transparency and credit.
 
-## Questions?
-Join the discussion at: https://github.com/Sir-Benjamin-source/SpiralForge-Codex/discussions
+Code Standards:
 
-Let’s build ethical AI together!
+Use Python 3.8+.
+Follow PEP 8 style guidelines.
+Ensure compatibility with numpy, pandas, requests.
+
+
+Transparency:
+
+All contributions are logged in the Spiral Lighthouse Protocol’s Legal Evidence Vault.
+Include your GitHub handle and a brief contribution summary.
+
+
+Scope:
+
+Focus on enhancing truth-layering, narrative coherence, ethical filtering, or continuity optimization.
+Avoid adding new features beyond the README’s scope.
+
+
+Issues and Discussions:
+
+Check https://github.com/Sir-Benjamin-source/SpiralForge-Codex/discussions for open issues.
+Propose new ideas via GitHub Discussions or X (@SirBenjamino0).
+
+
+
+Thank you for supporting ethical AI through systems thinking!
