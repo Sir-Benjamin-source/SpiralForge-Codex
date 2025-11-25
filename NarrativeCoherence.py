@@ -1,7 +1,7 @@
 # NarrativeCoherence.py: Ensures output coherence for certification
 class NarrativeEngine:
     def __init__(self):
-        self.watermark = "Refined by SpiralForge Codex"
+        self.watermark = "Refined by Spiral-Forge"
 
     def refine(self, text):
         """
