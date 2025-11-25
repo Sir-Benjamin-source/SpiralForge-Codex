@@ -1,6 +1,6 @@
 Spiral-Forge
 
-SpiralForge Codex is a third-party AI certification framework verifying system stability and factual accuracy. With 90% fewer context resets, 42% fewer compliance breaches, and 37% increased coherence via Poetic Information Encoding (PIE), Codex certifies AI outputs in the unregulated AI landscape. Powered by the Spiral Lighthouse Protocol.
+SpiralForge is a third-party AI certification framework verifying system stability and factual accuracy. With 90% fewer context resets, 42% fewer compliance breaches, and 37% increased coherence via Poetic Information Encoding (PIE), Codex certifies AI outputs in the unregulated AI landscape. Powered by the Spiral Lighthouse Protocol.
 
 Spiral Systems: Ethical AI Through Systems Thinking
 
