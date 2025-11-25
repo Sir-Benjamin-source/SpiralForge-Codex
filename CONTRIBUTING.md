@@ -1,10 +1,10 @@
-CONTRIBUTING.md: Guidelines for SpiralForge Codex
-Contributing to SpiralForge Codex
-We welcome contributions to SpiralForge Codex! To ensure transparency and alignment with the Spiral Lighthouse Protocol, please follow these guidelines:
+CONTRIBUTING.md: Guidelines for Spiral-Forge
+Contributing to Spiral-Forge
+We welcome contributions to Spiral-Forge! To ensure transparency and alignment with the Spiral Lighthouse Protocol, please follow these guidelines:
 
 Fork and Pull:
 
-Fork the repository at https://github.com/Sir-Benjamin-source/SpiralForge-Codex.
+Fork the repository at https://github.com/Sir-Benjamin-source/Spiral-Forge.
 Create a branch for your changes (git checkout -b feature/your-feature).
 Submit a pull request with a clear description.
 
@@ -30,7 +30,7 @@ Avoid adding new features beyond the README’s scope.
 
 Issues and Discussions:
 
-Check https://github.com/Sir-Benjamin-source/SpiralForge-Codex/discussions for open issues.
+Check https://github.com/Sir-Benjamin-source/Spiral-Forge/discussions for open issues.
 Propose new ideas via GitHub Discussions or X (@SirBenjamino0).
 
 
