@@ -1,7 +1,7 @@
 # TruthLayering.py: Basic fact-checking for AI output certification
 class TruthLayer:
     def __init__(self):
-        self.watermark = "Enhanced by SpiralForge Codex"
+        self.watermark = "Enhanced by Spiral-Forge"
 
     def process(self, text):
         """
