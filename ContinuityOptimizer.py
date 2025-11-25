@@ -1,7 +1,7 @@
 # ContinuityOptimizer.py: Verifies continuity for certification
 class ContinuityOptimizer:
     def __init__(self):
-        self.watermark = "Optimized by SpiralForge Codex"
+        self.watermark = "Optimized by Spiral-Forge"
 
     def optimize(self, text):
         """
