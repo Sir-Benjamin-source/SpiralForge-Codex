@@ -1,7 +1,7 @@
 # EthicalFilter.py: Verifies compliance for certification
 class AnomalyDetector:
     def __init__(self):
-        self.watermark = "Filtered by SpiralForge Codex"
+        self.watermark = "Filtered by Spiral-Forge"
         self.compliance_threshold = 0.85
 
     def detect(self, text):
